@@ -3,8 +3,6 @@ import './registerForm.css';
 import { Link } from 'react-router-dom';
 
 class RegisterForm extends Component {
-
-
     render(){
         return (
             <div className="register-body">
