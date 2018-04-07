@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './loginForm.css';
-import { Link } from 'react-router-dom';
+import { Link, Redirect, Router  } from 'react-router-dom';
 
 class LoginForm extends Component {
     propTypes: {
         user: PropTypes.string.isRequired,
         onChange: PropTypes.func.isRequired,
         onCheck: PropTypes.func.isRequired,
-        errors: PropTypes.object
-    }
+        errors: PropTypes.object,
+        to: PropTypes.bool.isRequired
+    };
+
+    // changeRoute(){
+    //     return this.router.confirmTransitionTo("/user");
+    // }
 
     render(){
         return (
@@ -20,7 +25,7 @@ class LoginForm extends Component {
                             <div className="login-view-content">
                                 <img className="mx-auto d-block login-avatar" src={require('../img/user.png')} alt=""/>
                                 <div className="login-form-content form-control">
-                                    <form action="" method="POST">
+                                    <form action="" method="">
                                         <div className="form-group">
                                             <label htmlFor="loginUsername">Username</label>
                                             <input
@@ -56,13 +61,12 @@ class LoginForm extends Component {
                                                     {/*type="submit"*/}
                                                     {/*value="Login"*/}
                                                     {/*className="btn btn-primary login-content-margin"*/}
-                                                    {/*onClick={this.props.onCheck}*/}
+                                                    {/*onClick={this.changeRoute}*/}
                                                 {/*/>*/}
-                                                {this.props.children}
+                                                {/*{this.props.children}*/}
                                                 <Link
                                                     to="user"
                                                     className="btn btn-primary login-content-margin"
-
                                                 >LOGIN</Link>
                                             </div>
                                         </div>

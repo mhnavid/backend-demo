@@ -39,7 +39,13 @@ class ManageLoginPage extends Component{
             return;
         }
         this.ToastContainer.success('Successfully logged in.');
-        
+
+    }
+    changeRoute(){
+        if (this.authorFormIsValid()){
+            return true;
+        }
+        return false;
     }
 
     render(){
@@ -49,6 +55,7 @@ class ManageLoginPage extends Component{
                 onChange={this.setUserState}
                 onCheck={this.loginUser}
                 errors={this.state.errors}
+                to={this.changeRoute}
             />
         );
     }
