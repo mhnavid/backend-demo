@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './userPage.css';
+import ChooseTable from "../user_tables/choose_table/chooseTable";
 
 class UserPage extends Component {
 
@@ -16,8 +17,8 @@ class UserPage extends Component {
                 </nav>
                 <div className="container-fluid">
                     <div className="row">
-                        <div className="col-md-12 col-sm-12">
-
+                        <div className="col-md-12 col-sm-12 choose-table">
+                            <ChooseTable/>
                         </div>
                     </div>
                 </div>
