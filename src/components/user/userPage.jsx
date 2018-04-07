@@ -9,11 +9,20 @@ class UserPage extends Component {
         return (
             <div>
                 <nav className="navbar avbar-expand-lg navbar-dark bg-dark">
-                    <a className="navbar-brand" href="#">ADMIN</a>
-                    <Link
-                        to="register"
-                        className="btn btn-outline-info"
-                    >Register User</Link>
+                    <p className="navbar-brand">ADMIN</p>
+                    <div className="user-page-button">
+                        <span className="register-button">
+                            <Link
+                                to="register"
+                                className="btn btn-outline-info"
+                            >Register User</Link>
+                        </span>
+
+                        <Link
+                            to="register"
+                            className="btn btn-danger"
+                        >LOGOUT</Link>
+                    </div>
                 </nav>
                 <div className="container-fluid">
                     <div className="row">

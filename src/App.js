@@ -15,6 +15,7 @@ class App extends Component {
             <Route path={"/register"} component={RegisterForm} />
             <Route path={"/caselist"} component={CaseTable}/>
             <Route path={"/userlist"} component={UserTable}/>
+            <Route path={"/logout"} component={UserPage} />
         </Switch>
     );
   }

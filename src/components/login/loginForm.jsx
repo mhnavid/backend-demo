@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './loginForm.css';
-import { Link, Redirect, Router  } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class LoginForm extends Component {
     propTypes: {

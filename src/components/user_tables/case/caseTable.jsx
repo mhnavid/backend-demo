@@ -3,13 +3,26 @@ import './caseTable.css';
 import UserPage from "../../user/userPage";
 
 class CaseTable extends Component {
-
     render(){
+        const caselist = [
+            {id: 1, car: 'Dhaka Metro la 1270', owner: 'test', case:'test case 1' },
+            {id: 2, car: 'Dhaka Metro la 1270', owner: 'test', case:'test case 2' }
+        ];
+        const caselst = caselist.map((cases) => {
+            return (
+                <tr>
+                    <th scope="row">{cases.id}</th>
+                    <td>{cases.car}</td>
+                    <td>{cases.owner}</td>
+                    <td>{cases.case}</td>
+                </tr>
+            )
+        });
         return (
             <div>
                 <UserPage/>
                 <div className="container">
-                    <table className="table">
+                    <table className="table text-center">
                         <thead className="thead-dark">
                         <tr>
                             <th scope="col">No</th>
@@ -19,12 +32,7 @@ class CaseTable extends Component {
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
+                        {caselst}
                         </tbody>
                     </table>
                 </div>
