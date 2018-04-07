@@ -15,7 +15,7 @@ class ChooseTable extends Component {
                                 className="btn btn-secondary"
                             >User List</Link>
                             <Link
-                                to=""
+                                to="caselist"
                                 className="btn btn-secondary"
                             >Case List</Link>
                         </div>
